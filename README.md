@@ -31,6 +31,6 @@ python manage.py makemigrations --check --dry-run
 
 ## Deployment
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for the existing Elastic Beanstalk environment in us-east-2. Deployment runs migrations, creates sample polls, and collects admin static files. Sample data matches the final part-2 exercise: “What’s up?” with “Not much” and “The sky”. Previous custom demo questions are removed by migrations; polls created by the user are retained.
+See [DEPLOYMENT.md](DEPLOYMENT.md) for the existing Elastic Beanstalk environment in us-east-2. Deployment runs migrations, creates sample polls, and collects admin static files. At the user’s request, sample data consists of three simple U.S. history questions with four choices each. The views and templates still follow tutorial parts 1–4. Previous custom demo questions are removed by migrations; polls created by the user are retained.
 
 Submit the public app URL and an accessible repository URL on Brightspace. Repository visibility must be checked separately before submission.

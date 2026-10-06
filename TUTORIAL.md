@@ -40,3 +40,7 @@ Sample question data now follows the tutorial exactly. Automated verification an
 AWS is intentionally terminated at the user's request. Completing the submission still requires redeployment, public URL verification, accessible GitHub code and submission of both URLs on Brightspace. No redeployment is authorized by this code-alignment request.
 
 The final sample data is “What’s up?” with “Not much” and “The sky”. The part-2 exercise creates “Just hacking again” and then deletes it, so it is absent from the final app. Index/detail/results templates and the generic views/vote handler now reproduce the tutorial examples. The seed command is deployment support for recreating that same data, not an extra tutorial feature.
+
+## User-requested sample-data change
+
+The user subsequently requested replacing “What’s up?” with three simple U.S. history trivia questions. Only sample data changed; the tutorial’s views, templates, radio form and vote-count results remain. These are polls: the results show vote counts, and the app does not grade answers or reveal a correct-answer key.

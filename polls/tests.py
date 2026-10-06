@@ -58,7 +58,7 @@ class PollsTests(TestCase):
 
     def test_seed_command_preserves_existing_votes(self):
         call_command("seed_polls", verbosity=0)
-        choice = Question.objects.get(question_text="What's up?").choice_set.first()
+        choice = Question.objects.get(question_text="Who was the first president of the United States?").choice_set.first()
         choice.votes = 7
         choice.save()
         count = Question.objects.count()
