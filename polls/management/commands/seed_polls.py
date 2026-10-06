@@ -5,13 +5,13 @@ from polls.models import Question
 
 SAMPLE_POLLS = [
     ("Who was the first president of the United States?", [
-        "George Washington", "Thomas Jefferson", "John Adams", "Abraham Lincoln",
+        "George Washington", "Thomas Jefferson", "John Adams",
     ]),
     ("In what year was the Declaration of Independence adopted?", [
-        "1492", "1776", "1789", "1865",
+        "1492", "1776", "1789",
     ]),
     ("Who was president during the American Civil War?", [
-        "George Washington", "Andrew Jackson", "Abraham Lincoln", "Theodore Roosevelt",
+        "George Washington", "Andrew Jackson", "Abraham Lincoln",
     ]),
 ]
 
