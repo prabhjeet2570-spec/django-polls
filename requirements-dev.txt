@@ -1,2 +1,0 @@
--r requirements.txt
-awsebcli==3.27.3
