@@ -14,4 +14,6 @@ def remove_fourth_choices(apps, schema_editor):
 
 class Migration(migrations.Migration):
     dependencies = [("polls", "0004_remove_tutorial_sample")]
-    operations = [migrations.RunPython(remove_fourth_choices, migrations.RunPython.noop)]
+    operations = [
+        migrations.RunPython(remove_fourth_choices, migrations.RunPython.noop)
+    ]

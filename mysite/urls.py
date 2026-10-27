@@ -3,6 +3,7 @@ from django.http import JsonResponse
 from django.urls import include, path
 from django.views.generic import RedirectView
 
+
 def health(request):
     return JsonResponse({"status": "ok"})
 
