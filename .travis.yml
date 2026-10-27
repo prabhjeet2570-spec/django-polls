@@ -18,7 +18,7 @@ script:
   - python -m coverage report
 
 after_success:
-  - coveralls
+  - coveralls --service=travis-pro
 
 deploy:
   provider: elasticbeanstalk
