@@ -14,4 +14,6 @@ def remove_custom_samples(apps, schema_editor):
 
 class Migration(migrations.Migration):
     dependencies = [("polls", "0002_replace_demo_polls")]
-    operations = [migrations.RunPython(remove_custom_samples, migrations.RunPython.noop)]
+    operations = [
+        migrations.RunPython(remove_custom_samples, migrations.RunPython.noop)
+    ]
