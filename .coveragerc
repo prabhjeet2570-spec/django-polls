@@ -1,0 +1,12 @@
+[run]
+branch = True
+source = polls,mysite
+relative_files = True
+omit =
+    */migrations/*
+    */tests.py
+    */asgi.py
+    */wsgi.py
+
+[report]
+show_missing = True

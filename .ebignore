@@ -9,3 +9,8 @@ __pycache__/
 staticfiles/
 .elasticbeanstalk/
 *.zip
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.coveralls.yml

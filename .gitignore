@@ -11,3 +11,8 @@ staticfiles/
 !.elasticbeanstalk/config.yml
 *.zip
 .DS_Store
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.coveralls.yml
