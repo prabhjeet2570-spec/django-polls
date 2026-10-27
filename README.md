@@ -44,12 +44,12 @@ Run `python -m black .` to format the code before committing. Black and flake8 u
 
 `.travis.yml` runs the checks above for pushes and pull requests, then reports coverage to Coveralls. Successful builds on `main` deploy to the existing `django-application-env` Elastic Beanstalk environment in `us-east-2`. Pull request builds do not deploy.
 
-Service setup:
+Service configuration:
 
-1. Enable `prabhjeet2570-spec/django-polls` in Travis CI and Coveralls. In Travis settings, enable builds for pushes and pull requests.
-2. Set `EB_BUCKET_NAME` to the existing Elastic Beanstalk source-bundle bucket. Add `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` as hidden Travis environment variables using a deployment identity restricted to this app and bucket. Never use root credentials or commit secrets. Keep deployment credentials unavailable to pull requests.
-3. If Coveralls requires a repository token, add `COVERALLS_REPO_TOKEN` as a hidden Travis environment variable.
-4. After a pull request build runs, protect `main` in GitHub and enable **Require status checks to pass before merging**, selecting the Travis CI pull request check.
+1. Travis CI builds pushes and pull requests for `prabhjeet2570-spec/django-polls`; Coveralls receives the coverage reports.
+2. `EB_BUCKET_NAME`, `AWS_ACCESS_KEY_ID`, and `AWS_SECRET_ACCESS_KEY` are hidden Travis variables scoped to `main`. The dedicated `django-polls-travis-deploy` identity can upload polls source bundles and deploy versions to this environment. Sharing encrypted variables with forked pull requests is disabled. Never use root credentials or commit secrets.
+3. Coveralls uses its Travis integration without a repository token.
+4. GitHub protects `main` with the **Travis CI - Pull Request** check from the Travis CI app, requires branches to be up to date, and applies these requirements to administrators.
 
 For assignment 6.4, submit the Travis dashboard, live app, and GitHub repository URLs after verifying the hosted build and automatic deployment.
 
